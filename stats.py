@@ -5,7 +5,7 @@ def get_book_text(file_path):
     with open(file_path) as f:
         file_contents = f.read()
     num_words = len(file_contents.split())
-    return f"{num_words} words found in the document"
+    return f"Found {num_words} total words"
 
 def get_characters(file_path):
     with open(file_path) as f:
@@ -22,5 +22,5 @@ def get_sorted_list_characters(dict_characters):
     sorted_list_characters = []
     for key, value in dict_characters.items():
         sorted_list_characters.append({"character": key, "count_char": value})
-    result = sorted(sorted_list_characters, reverse=True, key=lambda dict_characters: dict_characters["count_char"])
+    result = sorted(sorted_list_characters, reverse=True, key=lambda dict_characters: dict_characters["count_char"])    # get key of sort
     return result
